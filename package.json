@@ -1,0 +1,43 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "spa for creating and passing tests",
+  "main": "y",
+  "scripts": {
+    "start": "webpack-dev-server --hot --inline",
+    "build": "webpack --env.mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"**/*.+(js|json)\""
+  },
+  "author": "alexZubaira",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.12.7",
+    "@babel/core": "^7.12.7",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^3.6.0",
+    "ejs": "^3.1.5",
+    "ejs-compiled-loader": "^3.0.0",
+    "ejs-html-loader": "^4.0.1",
+    "ejs-loader": "^0.5.0",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^1.3.2",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "prettier": "^2.2.0",
+    "sass-loader": "^8.0.2",
+    "sass-resources-loader": "^2.1.1",
+    "style-loader": "^1.3.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "bootstrap-4-grid": "^3.4.0",
+    "gsap": "^3.5.1"
+  }
+}

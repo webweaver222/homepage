@@ -1,0 +1,275 @@
+html, body
+    height: 100%
+    box-sizing: border-box
+    width: 100%
+    *, *::before, *::after
+        box-sizing: inherit
+    #root
+        height: 100%
+        width: 100%
+        font-family: qs-light
+        background-color: rgba(31, 35, 38, .99)
+        display: flex
+        .container
+            position: relative
+            width: 63%
+            height: 100%
+            margin: 0 auto
+            display: flex
+            z-index: 0
+            .background
+                position: absolute
+                width: 100%
+                height: 100%
+                top: 1
+                z-index: -1
+                background: url('../svg/background.svg') no-repeat center
+            .watermark
+                position: absolute
+                top: 25px
+                left: 25px
+                display: flex
+                align-items: center
+                img
+                    width: 30px
+                    height: 30px
+                    margin-right: 5px
+                span
+                    font-family: monte-bold
+                    color: #fff
+                    font-size: 12px
+            .window
+                width: 821px
+                margin: auto
+                position: relative
+
+                header
+                    background-color: $black
+                    padding: gh(46px) gw(73px)
+                    border-top-left-radius: 15px
+                    border-top-right-radius: 15px
+                    display: flex
+                    justify-content: space-between
+                    .menu
+                        display: flex
+                        align-content: center
+                        img.logoCompany
+                            width: 40px
+                            height: 20px
+                            border-right: 1.4px solid #fff
+                            padding-right: 10px
+                        img.logoGame
+                            width: 24px
+                            height: 20px
+                            margin-left: 10px
+                        nav
+                            display: flex
+                            align-items: center
+                            margin-left: 20px
+                            ul
+                                display: flex
+                                li
+                                    color: #fff
+                                    font-family: monte-bold
+                                    font-size: 6px
+                                    margin-right: 15px
+                                    cursor: pointer
+                                li:last-of-type
+                                    margin-right: 0
+                                .withDropdown
+                                    position: relative
+                                    margin-right: 20px
+                                    &:after
+                                        content: ''
+                                        position: absolute
+                                        left: calc(100% + 5px)
+                                        top: 50%
+                                        transform: translate(0, -50%)
+                                        width: 0
+                                        height: 0
+                                        border-left: 2px solid transparent
+                                        border-right: 2px solid transparent
+                                        border-top: 3px solid #fff
+
+                    .profile
+                        display: flex
+                        align-items: center
+                        .profileAvatar
+                            height: 15px
+                            width: 15px
+                            background: url('../img/akali.png') no-repeat center
+                            background-size: contain
+                            border-radius: 50%
+                            margin-right: 7px
+                        span
+                            font-family: monte-bold
+                            color: #fff
+                            font-size: 6px
+                            position: relative
+                            &:after
+                                content: ''
+                                position: absolute
+                                left: calc(100% + 5px)
+                                top: 50%
+                                transform: translate(0, -50%)
+                                width: 0
+                                height: 0
+                                border-left: 2px solid transparent
+                                border-right: 2px solid transparent
+                                border-top: 3px solid #fff
+                main
+                    height: 462px
+                    position: relative
+                    z-index: 1
+                    background-color: rgba(255, 70, 86, 1)
+                    padding: 40px 0 0 0 
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-between
+                    .filler
+                        position: absolute
+                        top: 0
+                        height: 100%
+                        width: 100%
+                        z-index: 2
+                        background: url('../img/background.png') no-repeat center
+                        background-size: contain
+                    .deco-elements
+                        position: absolute
+                        top: 26px
+                        width: gw(2510px)
+                        height: gh(1310px)
+                        left: 0
+                        right: 0
+                        margin: 0 auto
+                        background: url('../svg/elements.svg')
+                    .cards
+                        display: flex
+                        position: relative
+                        justify-content: flex-end
+                        margin-right: -15px
+                        z-index: 5
+                        span.agents
+                            position: absolute
+                            font-family: drukWide
+                            font-size: 52px
+                            -webkit-text-stroke: .5px #fff
+                            letter-spacing: 2px
+                            color: transparent
+                            transform: rotate(90deg)
+                            top: 45%
+                            left: -8%
+                        .card
+                            background-color: $black
+                            width: gw(440px)
+                            height: gh(960px)
+                            margin-right: gw(124px)
+                            border-top-left-radius: 5px
+                            position: relative
+                            img
+                                height: 100%
+                                width: 100%
+                            .caption
+                                position: absolute
+                                transform: rotate(90deg)
+                                span
+                                    color: $red
+                                    font-family: drukWide 
+                                    font-size: 8px
+                                    letter-spacing: 1px
+                                h2
+                                   font-family: drukWide 
+                                   -webkit-text-stroke: .5px #fff
+                                   letter-spacing: 1.5px
+                                   color: transparent
+                                   font-size: 25px
+                                   margin-top: 2px
+                                h2.black
+                                    -webkit-text-stroke: .8px black
+                            .skills
+                                position: absolute
+                                background-color: $black
+                                display: flex
+                                justify-content: space-between
+                                border: 1px solid #fff
+                                bottom: -5%
+                                left: 5%
+                                width: 100%
+                                padding: 5px 10px
+                                img
+                                    width: 20px
+                                    height: 20px
+                            .skillsWhite
+                                background-color: #fff
+                                border: 1px solid $black
+                        .card-white
+                            background-color: #fff
+                        .card:last-of-type
+                            margin-right: 0
+                    .details
+                        display: flex
+                        justify-content: space-between
+                        position: relative
+                        z-index: 6
+                        margin: 0 32px -17px -32px
+                        .skill
+                            width: gw(724px)
+                            background-color: #fff
+                            border: 1px solid $black
+                            border-top-left-radius: 6px
+                            padding: 10px 20px
+                            position: relative
+                            h2
+                                font-family: drukWide
+                                color: rgba(196, 196, 196, 1)
+                                font-size: 13px
+                            span
+                                font-family: drukWide
+                                color: black
+                                font-size: 8px
+                            p
+                                width: 120px
+                                font-size: 7px
+                                font-family: monte
+                                margin-top: 5px
+                            .square
+                                position: absolute
+                                background-color: $red
+                                width: 50px
+                                height: 50px
+                                margin-left: 56%
+                                bottom: 0
+                                .icon  
+                                    position: absolute
+                                    top: 0
+                                    right: 0
+                                    transform: translate(25%, -28%)
+                                    width: 55px 
+                                    height: 55px
+                                    img
+                                        height: 100%
+                                        width: 100%
+                            
+                        .play
+                            width: gw(219px)
+                            border: 1px solid $black
+                            border-top-left-radius: 6px
+                            background-color: #fff
+                            position: relative
+                            img
+                                position: absolute
+                                top: 0
+                                right: 0
+                                left: 0
+                                bottom: 0
+                                margin: auto
+                footer
+                    position: relative
+                    z-index: 0
+                    background-color: #fff       
+                    border-bottom-left-radius: 15px
+                    border-bottom-right-radius: 15px
+                    padding: gh(66px) gw(73px)
+            
+
+       
