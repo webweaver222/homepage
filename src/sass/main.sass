@@ -51,10 +51,9 @@ html, body
                 padding: 20px
                 border-top-right-radius: 60px
                 z-index: 1
-                .project
+                .project.testify
                     display: flex
-                    
-                    .preview.testify
+                    .preview
                         border: 2px solid #fff
                         border-radius: 6px
                         cursor: pointer
@@ -77,16 +76,30 @@ html, body
                                 display: inline
                                 cursor: pointer
                                 padding: 0 3px
-                                a
+                                .trylink
+                                    color: $accent
+                                    font-weight: bold
+                                    margin-top: 20px
+                                    display: inline-block
+                                    font-size: 14px
                                     i
-                                        color: #fff
-                                        font-size: 15px
+                                        display: inline-block
+                                        font-style: normal
+                                        font-weight: 300
+                                        color: #ffffff
                                         width: 25px
                                         height: 25px
-                                        border-radius: 50%
-                                        background-color: darken($accent, 8%)
+                                        line-height: 20px
+                                        background-color: $accent
                                         text-align: center
+                                        border-radius: 100%
+                                        margin-right: 10px
+                                        font-size: 25px
+                                    i.fa-github-alt
+                                        font-size: 16px
                                         line-height: 25px
+                                    &:hover
+                                        color: $accent
                                     
                                      
                     .stack
