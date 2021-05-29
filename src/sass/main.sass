@@ -2,7 +2,7 @@ html, body
     height: 100%
     box-sizing: border-box
     width: 100%
-    font: ubuntu
+    //font-family:  ubuntu
     color: #ffffff
     letter-spacing: .5px
     font-size: 16px
@@ -11,8 +11,8 @@ html, body
     *, *::before, *::after
         box-sizing: inherit
 
-.text-right
-    text-align: center
+.left
+    text-align: left
 
 #root
     header
@@ -23,6 +23,11 @@ html, body
         z-index: 1
         .top-line
             padding: 30px 
+            .page-title
+                font-size: 26px
+                font-family: magra
+                letter-spacing: 1px
+
             .header-title
                 letter-spacing: 1px
                 font-family: magra
@@ -38,7 +43,7 @@ html, body
             display: flex
             min-height: 100%
             width: 100%
-            padding: 160px 0
+            padding-top: 60px
             transform-style: preserve-3d
             .board, .middle-layer, .bottom-layer
                 position: relative
@@ -48,20 +53,24 @@ html, body
                 background-color: #000000
                 background-image: linear-gradient(315deg, darken($black, 7%) 0%, lighten($black, 1%) 74%)
                 border-radius: 35px
-                padding: 20px
+                padding: 29px
                 border-top-right-radius: 60px
                 z-index: 1
-                .project
+                .project.testify, .sociai, .rsdShop, .console, .uiux
                     display: flex
-                    
                     .preview
-                        border: 2px solid #fff
+                        border: 2px solid darken(#fff, 10%)
                         border-radius: 6px
                         cursor: pointer
+                        background: url('../svg/testifyPreview.svg') no-repeat center
+                        width: 140px//
+                        display: flex
                         img
-                            border-radius: 6px
-                            width: 200px
-                            //height: 150px
+                            width: 120px//
+                          
+                            margin: auto
+                            opacity: .8
+
                     .info
                         padding: 0 20px
                         display: flex
@@ -70,7 +79,7 @@ html, body
                         span
                             font-family: anton
                             letter-spacing: 1.2px
-                            font-size: 20px
+                            font-size: 18px
                         p
                             margin-top: 20px
                         ul
@@ -79,30 +88,89 @@ html, body
                                 display: inline
                                 cursor: pointer
                                 padding: 0 3px
-                                a
+                                .trylink
+                                    color: $accent
+                                    font-weight: bold
+                                    margin-top: 20px
+                                    display: inline-block
+                                    font-size: 13px
                                     i
-                                        color: #fff
-                                        font-size: 15px
+                                        display: inline-block
+                                        font-style: normal
+                                        font-weight: 300
+                                        color: #ffffff
                                         width: 25px
                                         height: 25px
-                                        border-radius: 50%
-                                        background-color: darken($accent, 8%)
+                                        line-height: 20px
+                                        background-color: $accent
                                         text-align: center
+                                        border-radius: 100%
+                                        margin-right: 10px
+                                        font-size: 25px
+                                    i.fa-github-alt
+                                        font-size: 14px
                                         line-height: 25px
+                                    &:hover
+                                        color: $accent
                                     
                                      
                     .stack
+                        margin-left: auto
+                        margin-right: 30px
+                        width: 170px
+                        .hidden
+                            display: none
                         span
                             font-family: anton
                             letter-spacing: 1.2px
                             font-size: 16px  
-                        ul      
-                            margin-top: 20px   
+                        ul        
                             li  
                                 padding: 4px 0 
-                                font-size: 14px   
-                                    
+                                font-size: 14px
+                        ul.first
+                            margin-top: 20px
+                           
+                .sociai
+                    margin-top: 20px   
+                    .preview
+                        background: #fff
+                        position: relative
+                        img
+                            position: absolute
+                            top: 0
+                            height: 100%
+                            left: 0
+                            right: 0
+                            bottom: 0
+                            z-index: 18
+                            opacity: .9
+                            border-radius: 7px
+                        .background
+                            svg
+                                position: absolute
+                                z-index: 1
+                            img
+                                z-index: 5
+                                opacity: 1
+                .uiux, .console, .rsdShop
+                    margin-top: 20px   
+                    .preview
+                        border-color: gray
+                        background-size: cover
+                        background-repeat: no-repeat
+                        background-position: center
+                .uiux
+                    .preview
+                        background-image: url('../img/uiux.jpg')
+                .console
+                    .preview
+                        background-image: url('../img/consl.jpg')
+                .rsdShop
+                    .preview
+                        background-image: url('../img/rsdMed.png')
 
+                     
 
                 .middle-layer, .bottom-layer
                     position: absolute
@@ -121,6 +189,40 @@ html, body
                     z-index: -2
                     background-color: darken($black, 5%)
                     opacity: .6
+        .links
+            position: absolute
+            top: 20px
+            right: 20px
+            z-index: 999
+            display: flex
+            flex-direction: column
+            align-items: center
+            i.fa-github
+                color: #A8A8A8
+                font-size: 33px
+                transition: opacity .3s ease
+                &:hover
+                   opacity: .87 
+            .lnd, .fb
+                display: block
+                width: 33px
+                height: 33px
+                cursor: pointer
+                transition: opacity .3s ease
+                margin-bottom: 16px
+            .lnd
+                background: url('../img/lnd.png') no-repeat
+                background-size: cover
+                &:hover
+                    opacity: .87
+            .fb
+                background: url('../img/fb.png') no-repeat
+                background-size: cover
+                width: 36px
+                height: 36px
+                opacity: .7
+                &:hover
+                    opacity: .63
 
         
             
@@ -136,7 +238,6 @@ html, body
             background: url('../svg/bg2.svg') no-repeat center
             opacity: 0.02
             z-index: -3
-            //border-radius: 50%
         
 
 .level--2
@@ -147,4 +248,42 @@ html, body
 
 .level-1
     transform: translateZ(30px)      
+
+.level-2
+    transform: translateZ(50px)     
          
+.background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 2
+    opacity: .8
+    .bub1
+        transform: translate(0, 90%)
+        animation: bub1 8s linear infinite
+    .bub2
+        transform: translate(30%, 70%)
+        animation: bub2 10s linear infinite
+    .bub3
+        transform: translate(50%, 100%)
+        animation: bub3 11s linear infinite
+    .bub4
+        transform: translate(80%, 50%)
+        transform: scale(1)
+        animation: bub4 15s linear infinite
+    .bub5
+        transform: translate(120%, 95%)
+        animation: bub5 15s linear infinite
+    .bub6
+        transform: translate(150%, 101%)
+        animation: bub6 8s linear infinite
+    .bub7
+        transform: translate(170%, 95%)
+        animation: bub7 8s linear infinite
+        transform: scale(0.2)
+    .bub8
+        transform: translate(175%, 100%)
+        animation: bub8 8s linear infinite
+        transform: scale(0.2)
