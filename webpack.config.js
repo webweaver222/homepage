@@ -17,7 +17,7 @@ module.exports = (env = {}) => {
   const getPlugins = () => {
     const plugins = [
       new HtmlWebpackPlugin({
-        title: "alexiad",
+        title: "lexiad",
         template: "./src/index.ejs",
       }),
     ];
@@ -34,6 +34,7 @@ module.exports = (env = {}) => {
     output: {
       path: require("path").resolve(__dirname, "dist"),
       filename: isProd ? "main-[hash:8].js" : undefined,
+      publicPath: "/",
     },
 
     module: {
