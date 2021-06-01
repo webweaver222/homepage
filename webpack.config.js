@@ -74,6 +74,7 @@ module.exports = (env = {}) => {
               options: {
                 outputPath: "images",
                 name: "[name]-[sha1:hash:7].[ext]",
+                esModule: false,
               },
             },
           ],
