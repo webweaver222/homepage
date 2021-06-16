@@ -6,7 +6,7 @@ html, body
     color: #ffffff
     letter-spacing: .5px
     font-size: 16px
-    perspective: 1000px
+    perspective: 2500px
     overflow: hidden
     *, *::before, *::after
         box-sizing: inherit
@@ -22,7 +22,7 @@ html, body
         position: relative
         z-index: 1
         .top-line
-            padding: 30px 
+            padding: 15px 30px 0px 30px
             .page-title
                 font-size: 26px
                 font-family: magra
@@ -49,13 +49,19 @@ html, body
                 position: relative
                 top: 0
                 left: 0
-                width: 70%
+                width: 80%
                 background-color: #000000
                 background-image: linear-gradient(315deg, darken($black, 7%) 0%, lighten($black, 1%) 74%)
                 border-radius: 35px
                 padding: 29px
                 border-top-right-radius: 60px
                 z-index: 1
+                .tech
+                    position: absolute
+                    top: 14px
+                    right: 16%
+                    font-family: magra
+                    letter-spacing: 2px
                 .project.testify, .sociai, .rsdShop, .console, .uiux
                     display: flex
                     .preview
@@ -67,7 +73,6 @@ html, body
                         display: flex
                         img
                             width: 120px//
-                          
                             margin: auto
                             opacity: .8
 
@@ -77,8 +82,8 @@ html, body
                         flex-direction: column
                         justify-content: space-between
                         span
-                            font-family: anton
-                            letter-spacing: 1.2px
+                            font-family: magra
+                            letter-spacing: 1.5px
                             font-size: 18px
                         p
                             margin-top: 20px
@@ -128,6 +133,8 @@ html, body
                             li  
                                 padding: 4px 0 
                                 font-size: 14px
+                            li:first-child
+                                color: $accent
                         ul.first
                             margin-top: 20px
                            
@@ -138,13 +145,15 @@ html, body
                         position: relative
                         img
                             position: absolute
+                            z-index: 3
+                            width: 70%
+                            height: 70%
                             top: 0
-                            height: 100%
+                            opacity: 1
                             left: 0
                             right: 0
                             bottom: 0
                             z-index: 18
-                            opacity: .9
                             border-radius: 7px
                         .background
                             svg
@@ -250,7 +259,7 @@ html, body
     transform: translateZ(30px)      
 
 .level-2
-    transform: translateZ(50px)     
+    transform: translateZ(60px)     
          
 .background
     position: absolute
