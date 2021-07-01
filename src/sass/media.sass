@@ -11,7 +11,7 @@
                 .page-title
                     font-size: 18px
             .content
-                padding-top: 30px
+                padding-top: 20px
                 .board
                     padding: 30px
                     width: 70%
@@ -68,7 +68,78 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-    /**/
+    html, body
+        overflow: initial
+        #root 
+            header 
+                .top-line
+                    .signature
+                        margin-bottom: 20px
+                        .header-title
+                            span
+                                display: none
+                            .name
+                                display: inline
+                                font-size: 16px
+                .links
+                    flex-direction: row
+                    top: 10px
+                    a
+                        margin-right: 6px
+                    .lnd, .fb
+                        margin-bottom: 0
+                        width: 30px
+                        height: 30px
+                    .lnd
+                        width: 27px
+                        height: 27px
+                    .git
+                        margin-bottom: 0
+                        i
+                            font-size: 28px
+                .content 
+                    padding-top: 10px
+                    .container
+                        .row
+                            >div
+                                padding: 0
+                            .board
+                                width: 100%
+                                padding: 20px 15px
+                                .tech
+                                    top: 7px
+                                    right: 30px
+                                .project
+                                    justify-content: space-between
+                                    .info
+                                        span, p
+                                            margin-bottom: 10px
+                                .testify, .sociai, .rsdShop, .console, .uiux
+                                    .preview
+                                        width: 130px
+                                        img
+                                            width: 67px
+                                    .stack
+                                        margin: 0
+                                        text-align: right
+                                .sociai
+                                    .preview
+                                        width: 115px
+                                        img
+                                            width: 90%
+                                .middle-layer, .bottom-layer
+                                    display: none
+        .level--2
+            transform: translateZ(0)       
+
+        .level--1
+            transform: translateZ(0)            
+
+        .level-1
+            transform: translateZ(0)      
+
+        .level-2
+            transform: translateZ(0)
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
     /**/

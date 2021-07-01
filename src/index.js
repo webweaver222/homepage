@@ -21,6 +21,7 @@ let cx,
   degree;
 
 var lg = window.matchMedia("(max-width: 1700px)");
+var phone = window.matchMedia("(max-width: 480px)");
 
 document.addEventListener("DOMContentLoaded", () => {
   // Custom JS
@@ -34,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clientX = e.pageX;
     clientY = e.pageY;
 
-    request = requestAnimationFrame(updateMe);
+    requestAnimationFrame(updateMe);
   });
 
   function updateMe() {
