@@ -75,7 +75,9 @@
     html, body
         overflow: initial
         #root 
-            header 
+            header
+                &::before
+                    background-size: 200% 100%
                 .top-line
                     .signature
                         margin-bottom: 20px
@@ -101,6 +103,7 @@
                         margin-bottom: 0
                         i
                             font-size: 28px
+                            color: darken(#D3D3D3,24)
                 .content 
                     padding-top: 10px
                     padding-bottom: 20px
