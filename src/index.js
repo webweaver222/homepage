@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     tilty = dx / cx;
     radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
     degree = radius * (lg ? 7 : 6);
-    gsap.to(".content", lg ? 0.5 : 0.7, {
+    gsap.to(".content", {
       transform: `rotate3d( ${tiltx}, ${tilty}, 0, ${degree}deg )`,
+      duration: lg ? 0.5 : 0.7,
     });
   }
 });
