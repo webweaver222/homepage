@@ -2,6 +2,7 @@ import "bootstrap-4-grid";
 import "./sass/fonts.sass";
 import "./sass/reset.sass";
 import "./sass/main.sass";
+import "./sass/bgc.sass";
 import { gsap } from "gsap";
 
 let cx,

@@ -15,7 +15,7 @@ html, body
 
 #root
     header
-        background-color: darken($black, 10%)
+        background-color: #262626
         min-height: 100vh
         animation: fadein 1s ease
         position: relative
@@ -51,7 +51,7 @@ html, body
                 left: 0
                 width: 80%
                 background-color: #000000
-                background-image: linear-gradient(315deg, darken($black, 7%) 0%, lighten($black, 1%) 74%)
+                background-image: linear-gradient(360deg, darken($black, 5%) 0%, darken($black, 1%) 74%)
                 border-radius: 35px
                 padding: 35px
                 border-top-right-radius: 60px
@@ -62,8 +62,9 @@ html, body
                     right: 16%
                     font-family: magra
                     letter-spacing: 2px
-                .project.testify, .sociai, .rsdShop, .console, .uiux
+                .project.testify, .sociai, .rsdShop, .console, .uiux, .issues
                     display: flex
+                    margin-top: 20px
                     .preview
                         border: 2px solid darken(#fff, 10%)
                         border-radius: 6px
@@ -138,25 +139,32 @@ html, body
                                 line-height: 16px
                         ul.first
                             margin-top: 20px
-                           
-                .sociai
-                    margin-top: 20px   
+                
+                .issues, .sociai
+                    margin-top: 0
                     .preview
                         background: #fff
                         position: relative
                         img
                             position: absolute
-                            z-index: 3
-                            width: 70%
-                            height: 70%
+                            width: 85%
+                            //height: 70%
                             top: 0
                             opacity: 1
                             left: 0
                             right: 0
                             bottom: 0
                             z-index: 18
-                            border-radius: 7px
+                    
+                           
+                .sociai
+                    margin-top: 20px   
+                    .preview
+                        img
+                            width: 70%
+                            height: 70%
                         .background
+                            position: relative
                             svg
                                 position: absolute
                                 z-index: 1
@@ -188,17 +196,19 @@ html, body
                     height: 100%
                     background-image: none
                 .middle-layer
-                    top: 15px
-                    left: -20px
+                    top: 10px
+                    left: -10px
                     z-index: -1
-                    background-color: darken($black, 3%)
-                    opacity: .4
+                    background-color: darken($black, 2%)
+                    opacity: .7
+                    //display: none
                 .bottom-layer
-                    top: 30px
-                    left: -40px
+                    top: 20px
+                    left: -20px
                     z-index: -2
-                    background-color: darken($black, 5%)
-                    opacity: .6
+                    background-color: darken($black, 3%)
+                    opacity: .5
+                    //display: none
         .links
             position: absolute
             top: 20px
@@ -248,8 +258,8 @@ html, body
             width: 100%
             height: 100%
             background: url('../svg/bg2.svg') no-repeat center
-            opacity: 0.02
-            z-index: -3
+            opacity: 0.04
+            z-index: -8
         
 
 .level--2
