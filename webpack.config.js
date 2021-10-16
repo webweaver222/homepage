@@ -17,8 +17,9 @@ module.exports = (env = {}) => {
   const getPlugins = () => {
     const plugins = [
       new HtmlWebpackPlugin({
-        title: "lexiad",
+        title: "Adolex",
         template: "./src/index.ejs",
+        favicon: "./src/img/icon1.png",
       }),
     ];
 
